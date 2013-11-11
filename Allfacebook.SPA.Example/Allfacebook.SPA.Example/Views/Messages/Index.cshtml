@@ -1,0 +1,28 @@
+﻿<div ng-controller="messagesCtrl">
+	
+    <div class="input-prepend">
+        <span class="add-on">User</span>
+        <input id="prependedInput" ng-model="searchMessages" type="text" placeholder="Username">
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Message</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="message in messages | filter: searchMessages">
+                <td> {{ message.id }} </td>
+                <td> {{ message.user }} </td>
+                <td> {{ message.messageText }} </td>
+                <td> {{ message.receiveDate }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre> {{ messages | json }}</pre>
+</div>
+

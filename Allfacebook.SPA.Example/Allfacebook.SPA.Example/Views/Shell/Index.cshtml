@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="main" ng-controller="shellCtrl">
+    
+    @Html.Partial("_NavigationMenu")
+
+    <div class="row-fluid main-content-div">
+        <div class="offset2 max-size-main">
+            @* Alerts only 3 at a time *@
+            <div ng-view class="content-center">
+            </div>
+        </div>
+        
+        @Html.Partial("_Footer")
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/files/scripts/shell")
+    @Scripts.Render("~/bundles/files/scripts/messages")
+    @Scripts.Render("~/bundles/files/scripts/dashboard")
+    @Scripts.Render("~/bundles/files/scripts/login")
+}

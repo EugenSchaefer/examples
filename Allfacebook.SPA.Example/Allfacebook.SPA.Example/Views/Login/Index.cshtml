@@ -1,0 +1,35 @@
+﻿<div ng-controller="loginCtrl">
+    <div class="row">
+        <div class="span6 offset3">
+            <form class="form-horizontal">
+                <div class="control-group">
+                        <center><input type="text" id="inputEmail" placeholder="Email"></center>
+                </div>
+                <div class="control-group">
+                       <center> <input type="password" id="inputPassword" placeholder="Password"></center>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <button type="submit" class="btn">Sign in</button>
+                    </div>
+                </div>
+            </form>
+    
+            <center>
+                <button class="btn-auth btn-facebook" href ng-click="loginWithFacebook()">
+                    Sign in with <b>Facebook</b>
+                </button>
+
+                <br/>
+                <br />
+
+                <button class="btn-auth btn-twitter" href ng-click="loginWithTwitter()">
+                    Sign in with <b>Twitter</b>
+                </button>
+            </center>
+        </div>
+    </div>
+</div>
